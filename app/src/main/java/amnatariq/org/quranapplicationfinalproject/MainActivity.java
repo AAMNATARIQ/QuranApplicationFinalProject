@@ -1,7 +1,5 @@
 package amnatariq.org.quranapplicationfinalproject;
 
-package amnatariq.org.myquranapplication;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
