@@ -24,7 +24,9 @@ public class d3 extends AppCompatActivity {
         navigationView = findViewById(R.id.navigationview);
         toolbar = findViewById(R.id.toolbar);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigration_open,R.string.navigration_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
 
         //Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
