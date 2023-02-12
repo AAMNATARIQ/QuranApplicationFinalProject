@@ -160,7 +160,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Search"
+                        android:text="Enter Data"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         android:textSize="20dp"
