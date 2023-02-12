@@ -26,4 +26,14 @@
         </item>
     </group>
 
+    <group android:checkableBehavior="single">
+        <item android:title="Extras">
+            <menu>
+                <item android:id="@+id/close"
+                    android:icon="@drawable/ic_baseline_close_24"
+                    android:title="Close"/>
+            </menu>
+        </item>
+    </group>
+
 </menu>
