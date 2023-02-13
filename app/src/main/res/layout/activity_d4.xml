@@ -1,64 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
-    android:orientation="vertical"
-    android:weightSum="10"
     tools:context=".d4">
 
-    <LinearLayout
-        android:id="@+id/lvcontainer"
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:background="#fff"
-        android:orientation="horizontal"
-        android:padding="1dp"
-        android:weightSum="3"
-        >
-        <TextView
-            android:id="@+id/textCompany"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:text="Company"
-            android:textColor="@color/black"
-            android:textSize="16sp">
-        </TextView>
-        <TextView
-            android:id="@+id/textProduct"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:padding="3dp"
-            android:text="Product"
-            android:textColor="@color/black"
-            android:textSize="16sp">
-        </TextView>
-        <TextView
-            android:id="@+id/textPrice"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:padding="3dp"
-            android:text="Price"
-            android:textColor="@color/black"
-            android:textSize="16sp">
-        </TextView>
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/recyclerView">
 
-    </LinearLayout>
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_below="@+id/lvcontainer"
-        android:layout_weight="8">
+    </androidx.recyclerview.widget.RecyclerView>
 
-    </ListView>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
