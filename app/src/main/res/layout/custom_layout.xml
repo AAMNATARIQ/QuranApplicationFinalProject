@@ -68,7 +68,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="---------------------------------------------------"
+            android:text="----------------------------------------------------------------"
             android:textColor="#CDC7C7"
             android:id="@+id/divider"
             android:layout_marginTop="-5dp"

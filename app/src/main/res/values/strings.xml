@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">QuranApplicationFinalProject</string>
     <string name="navigration_open">Open Navigation drawer</string>
-    <string name = "navigration_close">Close Navigation drawer</string>
+    <string name="navigration_close">Close Navigation drawer</string>
 
 
 </resources>
