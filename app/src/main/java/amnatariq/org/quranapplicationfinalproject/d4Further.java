@@ -56,5 +56,6 @@ public class d4Further extends AppCompatActivity {
         List<QuranModel> li = gson.fromJson(jsondata,listType);
 
 
+
     }
 }

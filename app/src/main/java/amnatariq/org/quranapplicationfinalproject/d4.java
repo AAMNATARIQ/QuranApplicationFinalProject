@@ -1,13 +1,12 @@
 package amnatariq.org.quranapplicationfinalproject;
 
+import android.content.Intent;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -191,17 +190,26 @@ public class d4 extends AppCompatActivity implements RecyclerViewInterface{
 
 
     private void initRecyclerView() {
-        recyclerView = findViewById(R.id.recyclerView);
-        adapter = new Adapter(userList, this);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        recyclerView=findViewById(R.id.recyclerView);
+        layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(RecyclerView.VERTICAL);
+        recyclerView.setLayoutManager(layoutManager);
+        adapter = new Adapter(userList,this);
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+
+//        recyclerView = findViewById(R.id.recyclerView);
+//        adapter = new Adapter(userList, this);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        recyclerView.setAdapter(adapter);
+//        adapter.notifyDataSetChanged();
 
     }
 
     @Override
     public void onItemClick(int position) {
-        Intent intent=new Intent(this,Surah.class);
+        Intent intent=new Intent(this,d4Further.class);
         intent.putExtra("sName",userList.get(position).getSurahName());
         intent.putExtra("sType",userList.get(position).getSurahType());
         startActivity(intent);

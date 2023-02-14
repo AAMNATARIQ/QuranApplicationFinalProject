@@ -46,7 +46,6 @@ package amnatariq.org.quranapplicationfinalproject;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -91,7 +90,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {
-        private TextView textView1;
+        private TextView textView;
         private TextView textView3;
 
 
@@ -99,7 +98,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         public ViewHolder(@NonNull View itemView,RecyclerViewInterface recyclerViewInterface)
         {
             super(itemView);
-            textView1 = itemView.findViewById((R.id.textview));
+            textView = itemView.findViewById((R.id.textview));
             textView3 = itemView.findViewById((R.id.textview3));
 
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -107,8 +106,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                 public void onClick(View v) {
                     if(recyclerViewInterface!=null)
                     {
-//                        int pos = getAbsoluteAdapterPosition();
-                        int pos=0;
+                        int pos = getAdapterPosition();
+
                         if(pos!=RecyclerView.NO_POSITION)
                         {
                             recyclerViewInterface.onItemClick(pos);
@@ -121,7 +120,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
         public void setData(String name, String msg) {
             //imageView.setImageResource(resource);
-            textView1.setText(name);
+            textView.setText(name);
             textView3.setText(msg);
         }
     }
