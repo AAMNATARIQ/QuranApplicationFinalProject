@@ -7,24 +7,23 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link AFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class AFragment extends Fragment {
+public class SurahFragment extends Fragment {
 
-
-    public AFragment() {
+    public SurahFragment() {
         // Required empty public constructor
     }
 
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_a, container, false);
+        return inflater.inflate(R.layout.fragment_surah, container, false);
     }
 }

@@ -23,23 +23,23 @@
         android:fitsSystemWindows="true"
         android:layout_gravity="start"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#f5ac2c"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:title=" QuranApplication"
-            app:titleTextColor="#ffff"
-            app:titleMarginStart="5dp"
-            tools:ignore="MissingConstraints"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#f5ac2c"-->
+<!--            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+<!--            app:title=" QuranApplication"-->
+<!--            app:titleTextColor="#ffff"-->
+<!--            app:titleMarginStart="5dp"-->
+<!--            tools:ignore="MissingConstraints"/>-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--    </ScrollView>-->
 </androidx.drawerlayout.widget.DrawerLayout>
