@@ -10,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -30,6 +33,12 @@ public class d3 extends AppCompatActivity {
         navigationView = findViewById(R.id.navigationview);
         toolbar = findViewById(R.id.toolbar);
 
+        setSupportActionBar(toolbar);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigration_open,R.string.navigration_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -37,8 +46,9 @@ public class d3 extends AppCompatActivity {
                 switch(item.getItemId())
                 {
                     case R.id.home_menu:
-                        Intent intent1 = new Intent(d3.this,MainActivity.class);
-                        startActivity(intent1);
+//                        Intent intent1 = new Intent(d3.this,MainActivity.class);
+//                        startActivity(intent1);
+                        loadFragment(new AFragment());
                         return true;
                     case R.id.menu_menu:
                         Intent intent2 = new Intent(d3.this,Activity1.class);
@@ -49,19 +59,26 @@ public class d3 extends AppCompatActivity {
                     default:
                         throw new IllegalStateException("Unexpected value: " + item.getItemId());
                 }
-
+                //drawerLayout.closeDrawer(GravityCompat.START);
                 //return false;
             }
         });
 
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigration_open,R.string.navigration_close);
-       drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigration_open,R.string.navigration_close);
+//       drawerLayout.addDrawerListener(toggle);
+//        toggle.syncState();
 //
 //        //Toolbar toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 
 
+    }
+
+    private void loadFragment(Fragment f) {
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(R.id.container,f);
+        ft.commit();
     }
 }
