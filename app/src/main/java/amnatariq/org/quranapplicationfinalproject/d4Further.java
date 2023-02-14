@@ -60,7 +60,7 @@ public class d4Further extends AppCompatActivity {
 //        }
 
         String jsonFileString = Utils.getJsonFromAssets(getApplicationContext(), "QuranMetaData.json");
-        //Log.i("data", jsonFileString);
+       // Log.i("data", jsonFileString);
 
         Gson gson = new Gson();
         Type listUserType = new TypeToken<List<QuranModel>>() { }.getType();
@@ -72,5 +72,6 @@ public class d4Further extends AppCompatActivity {
             //tvcontent.setText(users.get(i).toString());
             tvcontent.setText("blahblahblah");
         }
+
     }
 }
