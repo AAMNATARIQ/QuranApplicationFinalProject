@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -183,6 +184,8 @@ public class d4 extends AppCompatActivity implements RecyclerViewInterface{
 
         userList.add(new ModalClass("سُورَةُ الفَلَقِ\n","Meccan"));
         userList.add(new ModalClass("سُورَةُ النَّاسِ\n","Meccan"));
+
+
 
     }
 
