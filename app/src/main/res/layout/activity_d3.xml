@@ -15,6 +15,7 @@
         android:id="@+id/navigationview"
         app:headerLayout="@layout/headerfile"
         app:menu="@menu/sidemenu"
+        android:fitsSystemWindows="true"
         android:layout_gravity="start"/>
 
     <ScrollView

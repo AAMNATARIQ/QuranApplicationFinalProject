@@ -275,4 +275,14 @@ public class QuranModel
     public void setPushtoTafseer(String pushtoTafseer) {
         PushtoTafseer = pushtoTafseer;
     }
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + surah_name + '\'' +
+                ", age=" + surah_number +
+                ", messages=" + englishName +
+                '}';
+    }
 }
